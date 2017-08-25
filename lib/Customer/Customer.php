@@ -139,12 +139,23 @@ class Customer{
 /**
     * @var GestaoApi\Sdk\Contact
   */
-  private $contacts;
+  private $contatos;
 
 /**
     * @var GestaoApi\Sdk\Address
   */
-  private $addresses;
+  private $enderecos;
+
+/**
+    * @var GestaoApi\Sdk\User
+  */
+  private $vendedores;
+
+
+/**
+    * @var GestaoApi\Sdk\User
+  */
+  private $vendedores;
 
 public function __construct(array $arrayData){
   $this->fill($arrayData);
@@ -337,18 +348,23 @@ public function __construct(array $arrayData){
 /**
     * @codeCoverageIgnore
   */
-  public function getContacts() : array{
-    return $this->contacts;
+  public function getContatos() : array{
+    return $this->contatos;
   }
 
 /**
     * @codeCoverageIgnore
   */
-  public function getAddresses() : array{
-    return $this->addresses;
+  public function getEnderecos() : array{
+    return $this->enderecos;
   }
 
-
+  /**
+    * @codeCoverageIgnore
+  */
+  public function getVendedores() : array{
+    return $this->vendedores;
+  }
 
 
 }
